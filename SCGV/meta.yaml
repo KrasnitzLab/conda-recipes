@@ -1,0 +1,55 @@
+{% set name = "SCGV" %}
+{% set version = "1.0.2" %}
+{% set sha256hash = "4cf0a6310520ae3a43eed097a5f331a52920a8059672279d3aa1884e95360524" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  # url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
+  url: file:///home/lubo/Work/single-cell/SCGV.tar.gz
+  sha256: {{ sha256hash }}
+
+build:
+  number: 0
+  entry_points:
+    - scgview = scgv.tkmain:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - matplotlib
+    - numpy
+    - pandas
+    - scipy
+    - pillow
+  run:
+    - python
+    - setuptools
+    - matplotlib
+    - numpy
+    - pandas
+    - scipy
+    - pillow
+test:
+  imports:
+    - scgv
+  commands:
+    - scgview --help
+
+about:
+  home: https://github.com/KrasnitzLab/SCGV
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: SCGV is an interacive graphical tool for single-cell genomics data, with emphasis on single-cell genomics of cancer
+  description: ''
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''
