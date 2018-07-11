@@ -1,6 +1,6 @@
 {% set name = "SCGV" %}
 {% set version = "1.0.2" %}
-{% set sha256hash = "4cf0a6310520ae3a43eed097a5f331a52920a8059672279d3aa1884e95360524" %}
+{% set sha256hash = "789ea42eebe58fd7988dd801bfa84636f15da1ea3168992843d6f1a9c4762a5d" %}
 
 
 package:
@@ -8,8 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  # url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
-  url: file:///home/lubo/Work/single-cell/SCGV.tar.gz
+  url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
   sha256: {{ sha256hash }}
 
 build:
