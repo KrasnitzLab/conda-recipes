@@ -1,0 +1,36 @@
+{% set version = "1.0.0RC3" %}
+{% set name = "SCclust" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+source:
+  url: 'https://github.com/KrasnitzLab/{{ name }}/archive/v{{ version }}.tar.gz'
+  sha256: "1d9b81f9ee4573a9f9f650acfa1bff0f6e393631575c78cc253e2ef335e5f978"
+build:
+  number: 1
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  host:
+    - r-base
+    - r-devtools
+    - r-testthat
+    - r-futile.logger >=1.4.3
+    - r-assertthat
+    - bioconductor-dnacopy
+  run:
+    - r-base
+    - r-devtools
+    - r-testthat
+    - r-futile.logger
+    - r-assertthat
+    - bioconductor-dnacopy
+test:
+  commands:
+    - '$R -e "library(''{{ name }}'')"'
+about:
+  home: 'https://github.com/KrasnitzLab/SCclust'
+  license: 'MIT'
+  summary: 'Segmentation and Clustering of Single Cell Sequencing Copy Number Profiles'
