@@ -1,14 +1,15 @@
-{% set version = "1.0.0RC3" %}
+{% set version = "1.0.0RC4m" %}
 {% set name = "SCclust" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 source:
-  url: 'https://github.com/KrasnitzLab/{{ name }}/archive/v{{ version }}.tar.gz'
-  sha256: "1d9b81f9ee4573a9f9f650acfa1bff0f6e393631575c78cc253e2ef335e5f978"
+  # url: 'https://github.com/KrasnitzLab/{{ name }}/archive/v{{ version }}.tar.gz'
+  # sha256: "1d9b81f9ee4573a9f9f650acfa1bff0f6e393631575c78cc253e2ef335e5f978"
+  path: ../../SCclust
 build:
-  number: 1
+  number: 4
   rpaths:
     - lib/R/lib/
     - lib/
