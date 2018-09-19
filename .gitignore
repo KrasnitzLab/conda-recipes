@@ -2,3 +2,4 @@
 /.pydevproject
 build/osx-64/
 .vagrant
+osx-64/

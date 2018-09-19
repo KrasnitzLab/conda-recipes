@@ -1,6 +1,6 @@
 {% set name = "SCGV" %}
-{% set version = "1.0.2" %}
-{% set sha256hash = "ddf55b21122923121e5e387cfeaafcdfa2c8d79c9a5ef35b60595737f1d35db3" %}
+{% set version = "1.0.3" %}
+{% set sha256hash = "81016c945809ae230d7d069d0b4d2bda0e464153fb6fe9f4f29bb7d0eb3354af" %}
 
 
 package:
