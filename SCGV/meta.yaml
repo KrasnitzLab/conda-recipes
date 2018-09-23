@@ -10,9 +10,9 @@ package:
 source:
   url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
   sha256: {{ sha256hash }}
-
+  # path: ../../SCGV
 build:
-  number: 0
+  number: 2
   entry_points:
     - scgview = scgv.tkmain:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -21,7 +21,7 @@ requirements:
   host:
     - python
     - setuptools
-    - matplotlib
+    - matplotlib <3.0.0
     - numpy
     - pandas
     - scipy
@@ -29,7 +29,7 @@ requirements:
   run:
     - python
     - setuptools
-    - matplotlib
+    - matplotlib <3.0.0
     - numpy
     - pandas
     - scipy
