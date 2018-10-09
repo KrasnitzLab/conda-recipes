@@ -1,36 +1,27 @@
-{% set version = "1.0.0" %}
-{% set name = "SCclust" %}
-
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: 'scclust'
+  version: '1.0.0'
 source:
-  url: 'https://github.com/KrasnitzLab/{{ name }}/archive/v{{ version }}.tar.gz'
-  sha256: "afccd05686a81b306e1023d2dc3dc3a06082d0d863177ed5a29a8ebec80a7994"
-  # path: ../../SCclust
+  # url: 
+  #   - 'https://github.com/KrasnitzLab/SCclust/releases/download/v1.0.0/SCclust_1.0.0.tar.gz'
+  # sha256: "e86ffa78f0fc5ef6bdb32c4465add3a8ebbad2e1ac3feca85b43f8dee24b4577"
+  path: ../SCclustSource
 build:
-  number: 4
+  number: 11
   rpaths:
     - lib/R/lib/
     - lib/
 requirements:
   host:
     - r-base
-    - r-devtools
-    - r-testthat
-    - r-futile.logger >=1.4.3
-    - r-assertthat
-    - bioconductor-dnacopy
   run:
     - r-base
-    - r-devtools
     - r-testthat
-    - r-futile.logger
     - r-assertthat
-    - bioconductor-dnacopy
+    - bioconductor-dnacopy=1.52
 test:
   commands:
-    - '$R -e "library(''{{ name }}'')"'
+    - '$R -e "library(SCclust)"'
 about:
   home: 'https://github.com/KrasnitzLab/SCclust'
   license: 'MIT'
