@@ -8,4 +8,5 @@ Vagrant.configure("2") do |config|
     vb.memory = "16000"
   end
   config.vm.synced_folder "../SCclust/", "/vagrant/SCclustSource"
+  config.vm.synced_folder "../SCGV/", "/vagrant/SCGVSource"
 end
