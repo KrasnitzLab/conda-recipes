@@ -1,0 +1,59 @@
+{% set name = "sgains" %}
+{% set version = "1.0.0" %}
+{% set sha256hash = "??" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  # url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
+  # sha256: {{ sha256hash }}
+  path: ../../sgains
+build:
+  number: 5
+  entry_points:
+    - sgains-tools = sgains.cli:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python >=3.6
+    - setuptools
+    - numpy
+    - pandas
+    - scipy
+    - pysam
+    - biopython
+  run:
+    - python >=3.6
+    - setuptools
+    - numpy
+    - pandas
+    - scipy
+    - pysam
+    - biopython
+    - termcolor
+    - python-box
+    - bowtie >=1.2.2,<2
+    - scclust
+  test:
+    imports:
+      - sgains
+    commands:
+      - sgains-tools --help
+
+about:
+  home: https://github.com/KrasnitzLab/sgains
+  license: MIT License
+  license_family: MIT
+  license_file: ''
+  summary: 'Sparse Genomic Analysis of Individual Nuclei by Sequencing (s-GAINS)'
+  description: 'Sparse Genomic Analysis of Individual Nuclei by Sequencing (s-GAINS)'
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers:
+    - lchorbadjiev

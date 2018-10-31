@@ -63,3 +63,24 @@ To install `SCclust` package use:
 conda install -c krasnitzlab scclust
 ```
 
+
+## Build sGAINS pipeline
+
+Example  building of sGAINS:
+
+```bash
+# conda build sgains
+conda build -c bioconda -c krasnitzlab sgains
+```
+
+To upload conda package into Anaconda Cloud channel for KrasnitzLab use:
+
+```bash
+anaconda upload -u krasnitzlab /home/lubo/anaconda3/conda-bld/linux-64/sgains-1.0.0-py36h39e3cac_1.tar.bz2
+```
+
+To install use:
+
+```bash
+conda install -c bioconda -c krasnitzlab sgains
+```
