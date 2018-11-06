@@ -12,7 +12,7 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../sgains
 build:
-  number: 5
+  number: 7
   entry_points:
     - sgains-tools = sgains.cli:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -26,6 +26,11 @@ requirements:
     - scipy
     - pysam
     - biopython
+    - termcolor
+    - python-box
+    - bowtie >=1.2.2,<2
+    - r-base >=3.5.1
+    - scclust
   run:
     - python >=3.6
     - setuptools
@@ -37,6 +42,7 @@ requirements:
     - termcolor
     - python-box
     - bowtie >=1.2.2,<2
+    - r-base >=3.5.1
     - scclust
   test:
     imports:

@@ -5,15 +5,19 @@ source:
   # url: 
   #   - 'https://github.com/KrasnitzLab/SCclust/releases/download/v1.0.0/SCclust_1.0.0.tar.gz'
   # sha256: "e86ffa78f0fc5ef6bdb32c4465add3a8ebbad2e1ac3feca85b43f8dee24b4577"
-  path: ../SCclustSource
+  # path: ../SCclustSource
+  path: ../../SCclust
 build:
-  number: 11
+  number: 12
   rpaths:
     - lib/R/lib/
     - lib/
 requirements:
   host:
     - r-base
+    - r-testthat
+    - r-assertthat
+    - bioconductor-dnacopy=1.52
   run:
     - r-base
     - r-testthat

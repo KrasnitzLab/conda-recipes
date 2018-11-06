@@ -19,9 +19,9 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - r-base
+    - r-base >=3.5.1
   run:
-    - r-base
+    - r-base >=3.5.1
 test:
   commands:
     - '$R -e "library(''{{ name }}'')"'
