@@ -1,25 +1,29 @@
+{% set name = "SCclust" %}
+{% set version = "v1.0.1" %}
+{% set sha256hash = "68942c5a5fba8e605a8802e41fc95493a057a2dcb69c1a92394ac79ab1914f1a" %}
+
 package:
-  name: 'scclust'
-  version: '1.0.0'
+  name: {{ name|lower }}
+  version: {{ version }}
 source:
-  # url: 
-  #   - 'https://github.com/KrasnitzLab/SCclust/releases/download/v1.0.0/SCclust_1.0.0.tar.gz'
-  # sha256: "e86ffa78f0fc5ef6bdb32c4465add3a8ebbad2e1ac3feca85b43f8dee24b4577"
+  url: 
+    - 'https://github.com/KrasnitzLab/SCclust/archive/{{ version }}.tar.gz'
+  sha256: {{ sha256hash }}
   # path: ../SCclustSource
-  path: ../../SCclust
+  # path: ../../SCclust
 build:
-  number: 12
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
 requirements:
   host:
-    - r-base
+    - r-base >=3.5.1
     - r-testthat
     - r-assertthat
     - bioconductor-dnacopy=1.52
   run:
-    - r-base
+    - r-base >=3.5.1
     - r-testthat
     - r-assertthat
     - bioconductor-dnacopy=1.52
