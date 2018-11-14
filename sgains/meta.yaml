@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256hash }}
   # path: ../../sgains
 build:
-  number: 8
+  number: 9
   entry_points:
     - sgains-tools = sgains.cli:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -31,6 +31,7 @@ requirements:
     - bowtie >=1.2.2,<2
     - r-base >=3.5.1
     - scclust >=1.0.1
+    - pyyaml
   run:
     - python >=3.6
     - setuptools
@@ -44,11 +45,13 @@ requirements:
     - bowtie >=1.2.2,<2
     - r-base >=3.5.1
     - scclust >=1.0.1
+    - pyyaml
   test:
     imports:
       - sgains
     commands:
       - sgains-tools --help
+      - sgains-tools scclust --help
 
 about:
   home: https://github.com/KrasnitzLab/sgains
