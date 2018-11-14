@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256hash }}
   # path: ../../sgains
 build:
-  number: 9
+  number: 10
   entry_points:
     - sgains-tools = sgains.cli:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -46,6 +46,9 @@ requirements:
     - r-base >=3.5.1
     - scclust >=1.0.1
     - pyyaml
+    - openssl =1.0.*
+    - htslib
+    - samtools
   test:
     imports:
       - sgains
