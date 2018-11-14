@@ -1,5 +1,5 @@
 {% set name = "SCclust" %}
-{% set version = "v1.0.1" %}
+{% set version = "1.0.1" %}
 {% set sha256hash = "68942c5a5fba8e605a8802e41fc95493a057a2dcb69c1a92394ac79ab1914f1a" %}
 
 package:
@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 source:
   url: 
-    - 'https://github.com/KrasnitzLab/SCclust/archive/{{ version }}.tar.gz'
+    - 'https://github.com/KrasnitzLab/SCclust/archive/v{{ version }}.tar.gz'
   sha256: {{ sha256hash }}
   # path: ../SCclustSource
   # path: ../../SCclust

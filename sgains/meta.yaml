@@ -1,6 +1,6 @@
 {% set name = "sgains" %}
 {% set version = "1.0.0" %}
-{% set sha256hash = "??" %}
+{% set sha256hash = "2f6b64d249c609932a8e1596b83d7c385c61c949f2c0cd36b9a6dbfeee12d4be" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
   version: {{ version }}
 
 source:
-  # url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
-  # sha256: {{ sha256hash }}
-  path: ../../sgains
+  url: https://github.com/KrasnitzLab/sgains/archive/v{{version}}.tar.gz
+  sha256: {{ sha256hash }}
+  # path: ../../sgains
 build:
-  number: 7
+  number: 8
   entry_points:
     - sgains-tools = sgains.cli:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -30,7 +30,7 @@ requirements:
     - python-box
     - bowtie >=1.2.2,<2
     - r-base >=3.5.1
-    - scclust
+    - scclust >=1.0.1
   run:
     - python >=3.6
     - setuptools
@@ -43,7 +43,7 @@ requirements:
     - python-box
     - bowtie >=1.2.2,<2
     - r-base >=3.5.1
-    - scclust
+    - scclust >=1.0.1
   test:
     imports:
       - sgains
