@@ -1,6 +1,6 @@
 {% set name = "SCGV" %}
-{% set version = "1.1.0" %}
-{% set sha256hash = "92f2c6b32b504d68c845a510131979d695b471571175f09897050e3fb5529fe7" %}
+{% set version = "1.2.0" %}
+{% set sha256hash = "9e986a2c170301f591f2ae888010ccf99b69fb8264b8b2f4df9751d63fd28ac3" %}
 
 
 package:
@@ -8,18 +8,19 @@ package:
   version: {{ version }}
 
 source:
-  # url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
-  # sha256: {{ sha256hash }}
-  path: ../../SCGV
+  url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
+  sha256: {{ sha256hash }}
+  # path: ../../SCGV
+  # path: ../SCGVSource
 build:
-  number: 6
+  number: 4
   entry_points:
     - scgview = scgv.qtmain:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   host:
-    - python >=3.7.0
+    - python >=3.6.0
     - setuptools
     - matplotlib >=3.0.0
     - numpy
@@ -28,7 +29,7 @@ requirements:
     - pillow
     - pyqt >=5.9
   run:
-    - python >=3.7.0
+    - python >=3.6.0
     - setuptools
     - matplotlib >=3.0.0
     - numpy
