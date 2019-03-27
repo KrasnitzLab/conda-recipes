@@ -1,6 +1,6 @@
 {% set name = "SCGV" %}
-{% set version = "1.2.0" %}
-{% set sha256hash = "9e986a2c170301f591f2ae888010ccf99b69fb8264b8b2f4df9751d63fd28ac3" %}
+{% set version = "1.2.1" %}
+{% set sha256hash = "3a588befcbe47f42b0134b716d0817245170a0b61aae9de666060613a9932785" %}
 
 
 package:
@@ -13,7 +13,7 @@ source:
   # path: ../../SCGV
   # path: ../SCGVSource
 build:
-  number: 4
+  number: 1
   entry_points:
     - scgview = scgv.qtmain:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
