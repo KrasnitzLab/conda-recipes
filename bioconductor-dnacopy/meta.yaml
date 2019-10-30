@@ -11,7 +11,7 @@ source:
     - 'https://depot.galaxyproject.org/software/{{ name }}/{{ name }}_{{ version }}_src_all.tar.gz'
   sha256: 51f192baca80ba98965893a5760306e0a250ede8c468c821951f864773a1f188
 build:
-  number: 1
+  number: 6
   rpaths:
     - lib/R/lib/
     - lib/
@@ -19,9 +19,9 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - r-base >=3.5.1
+    - r-base =3.5.1
   run:
-    - r-base >=3.5.1
+    - r-base =3.5.1
 test:
   commands:
     - '$R -e "library(''{{ name }}'')"'

@@ -6,27 +6,27 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 source:
-  url: 
-    - 'https://github.com/KrasnitzLab/SCclust/archive/{{ version }}.tar.gz'
-  sha256: {{ sha256hash }}
+  # url: 
+  #   - 'https://github.com/KrasnitzLab/SCclust/archive/{{ version }}.tar.gz'
+  # sha256: {{ sha256hash }}
   # path: ../SCclustSource
-  # path: ../../SCclust
+  path: ../../SCclust
 build:
-  number: 1
+  number: 4
   rpaths:
     - lib/R/lib/
     - lib/
 requirements:
   host:
-    - r-base >=3.5.1
+    - r-base =3.5.1
     - r-testthat
     - r-assertthat
-    - bioconductor-dnacopy=1.52
+    - bioconductor-dnacopy =1.52.0
   run:
-    - r-base >=3.5.1
+    - r-base =3.5.1
     - r-testthat
     - r-assertthat
-    - bioconductor-dnacopy=1.52
+    - bioconductor-dnacopy =1.52.0
 test:
   commands:
     - '$R -e "library(SCclust)"'

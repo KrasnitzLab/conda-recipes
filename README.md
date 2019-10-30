@@ -37,6 +37,10 @@ We need to build using `krasnitzlab` channel because of
 `bioconductor-dnacopy` dependency:
 
 ```bash
+conda build -c krasnitzlab -c r -c bioconda bioconductor-dnacopy
+```
+
+```bash
 conda build -c krasnitzlab SCclust
 ```
 
