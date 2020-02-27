@@ -8,10 +8,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
-  sha256: {{ sha256hash }}
-  # path: ../../SCGV
-  # path: ../SCGVSource
+  # url: https://github.com/KrasnitzLab/SCGV/archive/{{ version }}.tar.gz
+  # sha256: {{ sha256hash }}
+  path: ../../SCGV
 build:
   number: 2
   entry_points:

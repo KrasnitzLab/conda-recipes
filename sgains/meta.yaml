@@ -8,9 +8,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/KrasnitzLab/sgains/archive/{{version}}.tar.gz
-  sha256: {{ sha256hash }}
-  # path: ../../sgains
+  # url: https://github.com/KrasnitzLab/sgains/archive/{{version}}.tar.gz
+  # sha256: {{ sha256hash }}
+  path: ../../sgains
 build:
   number: 3
   entry_points:
