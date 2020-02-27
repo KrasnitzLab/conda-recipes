@@ -45,10 +45,10 @@ requirements:
     - python-box
     - bowtie >=1.2.2,<2
     - hisat2
-    - r-base >=3.6.1
+    - r-base >=3.6.2
     - scclust >=1.0.3
     - pyyaml
-    - openssl =1.0.*
+    - openssl =1.1.1d
     - htslib
     - samtools
   test:
