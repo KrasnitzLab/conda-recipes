@@ -32,7 +32,6 @@ requirements:
     - hisat2
     - r-base >=3.6.2
     - scclust >=1.0.3
-    - scgv >=1.2.2
     - pyyaml
   run:
     - python >=3.7
@@ -48,7 +47,6 @@ requirements:
     - hisat2
     - r-base >=3.6.1
     - scclust >=1.0.3
-    - scgv >=1.2.2
     - pyyaml
     - openssl =1.0.*
     - htslib
