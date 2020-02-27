@@ -19,33 +19,35 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - setuptools
-    - numpy
-    - pandas
-    - scipy
+    - numpy =1.18.1
+    - pandas =1.0.1
+    - scipy =1.4.1
     - pysam
     - biopython
     - termcolor
     - python-box
     - bowtie >=1.2.2,<2
-    - r-base >=3.5.1
-    - scclust >=1.0.2
+    - hisat2
+    - r-base >=3.6.2
+    - scclust >=1.0.3
     - scgv >=1.2.2
     - pyyaml
   run:
-    - python >=3.6
+    - python >=3.7
     - setuptools
-    - numpy
-    - pandas
-    - scipy
+    - numpy =1.18.1
+    - pandas =1.0.1
+    - scipy =1.4.1
     - pysam
     - biopython
     - termcolor
     - python-box
     - bowtie >=1.2.2,<2
-    - r-base >=3.5.1
-    - scclust >=1.0.2
+    - hisat2
+    - r-base >=3.6.1
+    - scclust >=1.0.3
     - scgv >=1.2.2
     - pyyaml
     - openssl =1.0.*
