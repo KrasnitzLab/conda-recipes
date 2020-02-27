@@ -1,6 +1,6 @@
 {% set name = "SCclust" %}
-{% set version = "1.0.2" %}
-{% set sha256hash = "7a2698a86d29b874202980177db8580b779f4a973a64c317b4b5a9ae63f8480c" %}
+{% set version = "1.0.3" %}
+# {% set sha256hash = "7a2698a86d29b874202980177db8580b779f4a973a64c317b4b5a9ae63f8480c" %}
 
 package:
   name: {{ name|lower }}
@@ -12,21 +12,21 @@ source:
   # path: ../SCclustSource
   path: ../../SCclust
 build:
-  number: 4
+  number: 5
   rpaths:
     - lib/R/lib/
     - lib/
 requirements:
   host:
-    - r-base =3.5.1
+    - r-base =3.6.2
     - r-testthat
     - r-assertthat
-    - bioconductor-dnacopy =1.52.0
+    - bioconductor-dnacopy
   run:
     - r-base =3.5.1
     - r-testthat
     - r-assertthat
-    - bioconductor-dnacopy =1.52.0
+    - bioconductor-dnacopy
 test:
   commands:
     - '$R -e "library(SCclust)"'
