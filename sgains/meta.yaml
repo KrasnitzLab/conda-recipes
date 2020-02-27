@@ -1,11 +1,11 @@
-# {% set name = "sgains" %}
-# {% set version = "1.0.3" %}
-# {% set sha256hash = "c5e5f2f951e3dd46b6211e5d42b74819984dc24d8cc386123d9801b95296cd59" %}
+{% set name = "sgains" %}
+{% set version = "1.3.0" %}
+{% set sha256hash = "c5e5f2f951e3dd46b6211e5d42b74819984dc24d8cc386123d9801b95296cd59" %}
 
 
 package:
-  name: sgains
-  version: 1.0.3
+  name: {{ name | lower }}
+  version: {{ version }}
 
 source:
   # url: https://github.com/KrasnitzLab/sgains/archive/{{version}}.tar.gz
