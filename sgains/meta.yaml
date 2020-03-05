@@ -33,6 +33,8 @@ requirements:
     - r-base >=3.6.2
     - scclust >=1.0.3
     - pyyaml
+    - dask =2.11.0
+    - dask-jobqueue =0.7.0
   run:
     - python >=3.7
     - setuptools
@@ -51,6 +53,8 @@ requirements:
     - openssl =1.1.1d
     - htslib
     - samtools
+    - dask =2.11.0
+    - dask-jobqueue =0.7.0
   test:
     imports:
       - sgains
