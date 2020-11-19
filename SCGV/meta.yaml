@@ -12,7 +12,7 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../SCGV
 build:
-  number: 43
+  number: 44
   entry_points:
     - scgview = scgv.qtmain:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -36,11 +36,11 @@ requirements:
     - scipy >=1.4.1
     - pillow
     - pyqt >=5.9.0
-test:
-  imports:
-    - scgv
-  commands:
-    - scgview --help
+# test:
+#   imports:
+#     - scgv
+#   commands:
+#     - scgview --help
 
 about:
   home: https://github.com/KrasnitzLab/SCGV
