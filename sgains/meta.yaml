@@ -1,5 +1,5 @@
 {% set name = "sgains" %}
-{% set version = "1.3.0" %}
+{% set version = "2.1.0" %}
 {% set sha256hash = "c5e5f2f951e3dd46b6211e5d42b74819984dc24d8cc386123d9801b95296cd59" %}
 
 
@@ -12,17 +12,17 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../sgains
 build:
-  number: 3
+  number: 40
   entry_points:
     - sgains-tools = sgains.cli:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   host:
-    - python >=3.7
+    - python =3.7
     - setuptools
     - numpy =1.18.1
-    - pandas =1.0.1
+    - pandas >=1.0.1
     - scipy =1.4.1
     - pysam
     - biopython
@@ -33,13 +33,13 @@ requirements:
     - r-base >=3.6.2
     - scclust >=1.0.3
     - pyyaml
-    - dask =2.11.0
-    - dask-jobqueue =0.7.0
+    - dask >=2.11.0
+    - dask-jobqueue >=0.7.0
   run:
-    - python >=3.7
+    - python =3.7
     - setuptools
     - numpy =1.18.1
-    - pandas =1.0.1
+    - pandas >=1.0.1
     - scipy =1.4.1
     - pysam
     - biopython
@@ -53,8 +53,8 @@ requirements:
     - openssl =1.1.1d
     - htslib
     - samtools
-    - dask =2.11.0
-    - dask-jobqueue =0.7.0
+    - dask >=2.11.0
+    - dask-jobqueue >=0.7.0
   test:
     imports:
       - sgains
