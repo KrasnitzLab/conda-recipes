@@ -1,5 +1,5 @@
 {% set name = "SCGV" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.5" %}
 {% set sha256hash = "7ba20e272b6e871227efd93e8a6b10b3f05276a121017c9dc38a56fd313f1d21" %}
 
 
@@ -12,7 +12,7 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../SCGV
 build:
-  number: 2
+  number: 41
   entry_points:
     - scgview = scgv.qtmain:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -21,19 +21,19 @@ requirements:
   host:
     - python =3.7
     - setuptools
-    - matplotlib =3.1.3
-    - numpy =1.18.1
-    - pandas =1.0.1
-    - scipy =1.4.1
+    - matplotlib >=3.1.3
+    - numpy >=1.18.1
+    - pandas >=1.0.1
+    - scipy >=1.4.1
     - pillow
     - pyqt >=5.9.0
   run:
-    - python =3.7
+    - python =>3.7
     - setuptools
-    - matplotlib =3.1.3
-    - numpy =1.18.1
-    - pandas =1.0.1
-    - scipy =1.4.1
+    - matplotlib >=3.1.3
+    - numpy >=1.18.1
+    - pandas >=1.0.1
+    - scipy >=1.4.1
     - pillow
     - pyqt >=5.9.0
 test:
