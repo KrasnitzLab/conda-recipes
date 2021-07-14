@@ -12,21 +12,22 @@ source:
   # path: ../SCclustSource
   path: ../../SCclust
 build:
-  number: 52
+  number: 53
   rpaths:
     - lib/R/lib/
     - lib/
 requirements:
   host:
-    - r-base >=4.1
+    - r-base =4.1.0
     - r-testthat
     - r-assertthat
-    - bioconductor-dnacopy >=1.66.0
+    - bioconductor-dnacopy =1.66.0
   run:
-    - r-base >=4.1
+    - r-base =4.1.0
     - r-testthat
     - r-assertthat
-    - bioconductor-dnacopy >=1.66.0
+    - r-futile.logger
+    - bioconductor-dnacopy =1.66.0
 test:
   commands:
     - '$R -e "library(SCclust)"'
