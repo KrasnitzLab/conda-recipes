@@ -12,7 +12,7 @@ source:
   # path: ../SCclustSource
   path: ../../SCclust
 build:
-  number: 53
+  number: 56
   rpaths:
     - lib/R/lib/
     - lib/

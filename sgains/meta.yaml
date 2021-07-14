@@ -12,7 +12,7 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../sgains
 build:
-  number: 40
+  number: 56
   entry_points:
     - sgains-tools = sgains.cli:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
