@@ -12,17 +12,17 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../sgains
 build:
-  number: 58
+  number: 59
   entry_points:
     - sgains-tools = sgains.cli:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   host:
-    - python =3.7
+    - python =3.7.11
     - setuptools =52.0.0
   run:
-    - python =3.7
+    - python =3.7.11
     - setuptools =52.0.0
     - numpy =1.18.1
     - pandas =1.3.2
@@ -33,10 +33,8 @@ requirements:
     - python-box =5.4.1
     - bowtie =1.3.0
     - hisat2 =2.2.0
-    - r-base =3.6.1
     - scclust =1.0.7
     - pyyaml =5.4.1
-    - openssl =1.1.1d
     - htslib =1.13
     - samtools =1.13
     - dask =2.30.0
