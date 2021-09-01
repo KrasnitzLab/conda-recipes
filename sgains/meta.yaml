@@ -12,9 +12,11 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../sgains
 build:
-  number: 60
+  number: 61
   entry_points:
-    - sgains-tools = sgains.cli:main
+    - sgains-tools = sgains.tool:main
+    - sg = sgains.tool:main
+
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -33,6 +35,7 @@ requirements:
     - biopython =1.78
     - termcolor =1.1.0
     - python-box =5.4.1
+    - cerberus =1.3.2
     - bowtie =1.3.0
     - hisat2 =2.2.1
     - scclust =1.0.7
