@@ -12,7 +12,7 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../sgains
 build:
-  number: 66
+  number: 68
   entry_points:
     - sgains-tools = sgains.tool:main
     - sg = sgains.tool:main
