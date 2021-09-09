@@ -12,7 +12,7 @@ source:
   # path: ../SCclustSource
   path: ../../SCclust
 build:
-  number: 68
+  number: 69
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,7 +24,7 @@ requirements:
     - r-testthat =2.1.1
     - r-assertthat =0.2.1
     - r-futile.logger =1.4.3
-    - bioconductor-dnacopy =1.66.0
+    - bioconductor-dnacopy =1.60.0
 test:
   commands:
     - '$R -e "library(SCclust)"'
