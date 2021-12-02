@@ -12,17 +12,17 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../SCGV
 build:
-  number: 71
+  number: 76
   entry_points:
     - scgview = scgv.qtmain:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   host:
-    - python =3.7.6
+    - python =3.8.12
     - setuptools =52.0.0
   run:
-    - python =3.7.6
+    - python =3.8.12
     - setuptools =52.0.0
     - matplotlib =3.4.2
     - numpy =1.18.1

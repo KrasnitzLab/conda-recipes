@@ -1,5 +1,5 @@
 {% set name = "SCclust" %}
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 # {% set sha256hash = "7a2698a86d29b874202980177db8580b779f4a973a64c317b4b5a9ae63f8480c" %}
 
 package:
@@ -12,7 +12,7 @@ source:
   # path: ../SCclustSource
   path: ../../SCclust
 build:
-  number: 70
+  number: 76
   rpaths:
     - lib/R/lib/
     - lib/
