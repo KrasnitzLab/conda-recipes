@@ -12,7 +12,7 @@ source:
   # sha256: {{ sha256hash }}
   path: ../../sgains
 build:
-  number: 76
+  number: 78
   entry_points:
     - sgains-tools = sgains.tool:main
     - sg = sgains.tool:main
@@ -21,10 +21,10 @@ build:
 
 requirements:
   host:
-    - python =3.8.12
+    - python =3.7
     - setuptools =52.0.0
   run:
-    - python =3.8.12
+    - python =3.7
     - setuptools =52.0.0
     - numpy =1.18.1
     - pandas =1.2.4
@@ -40,7 +40,7 @@ requirements:
     - hisat2 =2.1.0
     - bwa =0.7.17
     - fastx_toolkit =0.0.14
-    - scclust =1.0.7
+    - scclust =1.0.8
     - pyyaml =5.4.1
     - dask =2021.8.0
     - dask-jobqueue =0.7.3
